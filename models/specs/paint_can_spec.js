@@ -7,11 +7,22 @@ describe('PaintCan', function () {
   beforeEach(function () {
     paintCan1 = new PaintCan(10);
     paintCan2 = new PaintCan(20);
+    paintCan3 = new PaintCan(0);
   });
 
   it('should have some paint', function () {
     const actual = paintCan1.quantity;
     assert.strictEqual(actual, 10);
+  });
+
+  it('should check if empty (is empty)', function () {
+    const actual = paintCan1.checkEmpty();
+    assert.strictEqual(actual, false);
+  });
+
+  it('should check if empty (not empty)', function () {
+    const actual = paintCan3.checkEmpty();
+    assert.strictEqual(actual, true);
   });
 
 });
