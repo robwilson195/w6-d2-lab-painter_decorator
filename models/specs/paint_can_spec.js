@@ -4,6 +4,7 @@ const PaintCan = require('../paint_can.js');
 describe('PaintCan', function () {
   let paintCan1;
   let paintCan2;
+  let paintCan3;
   beforeEach(function () {
     paintCan1 = new PaintCan(10);
     paintCan2 = new PaintCan(20);
